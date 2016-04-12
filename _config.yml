@@ -1,22 +1,36 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: portfolio
-email: karenpunk3721@gmail.com
+title: Karen Labs
+email: karenpenglabs@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://karenlabs.com" # the base hostname & protocol for your site
+  Software Engineer at Uber, p5.js contributor building webGL renderer, data visualization enthusiast
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
 twitter_username: KarenPunkPunk
 github_username:  karenpeng
 
 # Build settings
 markdown: kramdown
-port: 8080
+highlighter: rouge
+permalink: /:title/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Tags
+    url: /tags
+  - title: Blog
+    url: /blog
+  - title: About
+    url: /about
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
