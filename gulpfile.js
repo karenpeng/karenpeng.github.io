@@ -62,10 +62,18 @@ gulp.task('stylus', function(){
  * Javascript Task
  */
 gulp.task('js', function(){
-	return gulp.src((env.p) ? 'src/js/**/*.js' : ['src/js/**/*.js', '!src/js/analytics.js'])
+	return gulp.src((env.p) ? 'src/js/*.js' : ['src/js/*.js', '!src/js/analytics.js'])
 		.pipe(plumber())
 		.pipe(concat('main.js'))
 		.pipe(uglify())
+		.pipe(gulp.dest('assets/js/'));
+});
+
+gulp.task('canvas', function(){
+	return gulp.src((env.p) ? 'src/js/canvas/*.js' : ['src/js/canvas/*.js', '!src/js/analytics.js'])
+		.pipe(plumber())
+		.pipe(concat('index.js'))
+		//.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'));
 });
 
@@ -93,4 +101,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the stylus,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['js', 'stylus', 'browser-sync', 'watch']);
+gulp.task('default', ['js', 'canvas', 'stylus', 'browser-sync', 'watch']);

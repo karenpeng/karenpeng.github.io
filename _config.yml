@@ -25,10 +25,6 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Tags
-    url: /tags
-  - title: Blog
-    url: /blog
   - title: About
     url: /about
 

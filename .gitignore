@@ -7,3 +7,4 @@ assets/img
 src/img
 .sass-cache
 .jekyll-metadata
+obj/
